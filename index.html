@@ -3,8 +3,6 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="og:title" content="Blood N Rocks Font Tester">
-    <meta property="og:description" content="Test the Blood N Rocks font by entering text to see how it looks in different styles.">
     <title class="text">Blood N Rocks Font Tester</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
@@ -13,20 +11,37 @@
 
     <div class="container mx-auto py-8">
         <h1 class="text-4xl font-bold text-center mb-8">Blood N Rocks Font Tester</h1>
-        <div class="divider border-t border-gray-300 mb-8"></div>
-        
-        <div class="flex flex-col items-center">
-          <p>Enter some text to convert: <br/> Press enter to see the result. </p>
-            <input id="input" type="text" class="text input border border-gray-300 rounded-md px-4 py-2 mb-4" />
-            <fieldset class="container results w-full" id="results-container">
-                <div id="results" class="results flex flex-wrap justify-start gap-4 p-4 bg-white shadow-md rounded-md"></div>
-            </fieldset>
-            <p id="output" class="mt-4 text-lg font-medium"></p>
-            <p id="results-msg" class="hidden"></p>
-            <p class="prompt text"></p>
+    <div class="footer">
+        <div class="container mx-auto">
+            <h3 class="text-2xl font-bold text-center mb-3">Settings</h3>
+
+            <label for="letter-spacing">Letter Spacing: </label>
+            <input id="letter-spacing" type="number" class="number input border border-gray-300 rounded-md px-4 py-2" min="0" value="3"/>
+
+            <label for="font-size">Font Size: </label>
+            <input id="font-size" type="number" class="number input border border-gray-300 rounded-md px-4 py-2" min="0" value="75"/>
+
+            <label for="font-family">Font Family: </label>
+            <select id="font-family" class="input border border-gray-300 rounded-md px-4 py-2">
+                <option selected>Sawf</option>
+                <option>Opal</option>
+            </select>
+
+            <p>Enter some text to convert: </p>
+            <input id="input" type="text" class="text input border border-gray-300 rounded-md px-4 py-2 mb-4"/>
+
+            <p>Press enter to see the result.</p>
         </div>
     </div>
-    
+        <div class="divider border-t border-gray-300 mb-8"></div>
+
+        <fieldset class="container results w-full" id="results-container">
+            <div id="results" class="results flex flex-wrap justify-start gap-4 p-4 bg-white shadow-md rounded-md"></div>
+        </fieldset>
+        <p id="output" class="mt-4 text-lg font-medium text-center"></p>
+    </div>
+
+
     <script src="script.js"></script>
 </body>
 </html>
